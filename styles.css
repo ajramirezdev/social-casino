@@ -4,41 +4,285 @@ body {
   padding: 0;
   background-color: #f5f5f5;
   color: #333;
+  padding-top: 69px;
 }
 
 header {
-  background-color: #222;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+  background-color: black;
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-nav a {
-  color: #fff;
-  margin: 0 1rem;
-  text-decoration: none;
+nav {
+  display: none;
 }
 
-main {
-  padding: 2rem;
+.gradient-logo {
+  display: flex;
+  align-items: center;
+}
+
+.gradient-logo h1 {
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+header button {
+  background-color: black;
+  border: none;
+  padding: 0;
 }
 
 .hero {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-bottom: 2rem;
+  background: radial-gradient(circle, #3b2255 0%, #000000 100%);
+  gap: 24px;
 }
 
-.game iframe {
-  border: 2px solid #ccc;
-  border-radius: 8px;
+.hero h2 {
+  font-size: 48px;
+  color: white;
+  margin: 0;
+}
+
+.hero h2 span {
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 0;
+  color: #9ca3a3;
+  line-height: 1.8;
+}
+
+.welcome-message {
+  display: flex; /* Arrange children in a row */
+  align-items: center; /* Vertically center icon and text */
+  gap: 4px; /* Space between icon and text */
+  border: 1px solid #552c7d;
+  background-color: #311a47;
+  color: #d8b4ed;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.welcome-message svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: center;
+}
+
+.start-playing-btn {
+  background: linear-gradient(90deg, #9939f3, #ee3491);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 16px 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 240px;
+  justify-content: center;
+}
+
+.view-games-btn {
+  background-color: #1f2937;
+  border: 1px solid #4b5563;
+  color: white;
+  font-size: 18px;
+  padding: 16px 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+}
+
+.hero-stats {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #9ca3a3;
+  font-size: 14px;
+  padding-bottom: 128px;
+}
+
+.hero-stats div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.features-section {
+  background-color: #18202f;
+  text-align: center;
+  padding: 80px 16px;
+}
+
+.features-section h3,
+.categories-section h3 {
+  margin: 0;
+  color: white;
+  font-size: 36px;
+}
+
+.features-section > p,
+.categories-section > p {
+  color: #9ca3af;
+  line-height: 1.8;
+  font-size: 18px;
+  margin-bottom: 64px;
+}
+
+.features,
+.categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.feature-card,
+.category-card {
+  border: 1px solid #3e4c63;
+  border-radius: 6px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.feature-logo {
+  background-color: #342a55;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.feature-title,
+.category-title {
+  color: white;
+  font-size: 20px;
+}
+
+.feature-text {
+  font-size: 16px;
+  color: #9ca3af;
+  line-height: 1.8;
+}
+
+.categories-section {
+  background-color: #1f2937;
+  text-align: center;
+  padding: 80px 16px;
+}
+
+.category-text {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.8;
+  margin: -12px;
+}
+
+.category-logo {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.slots-logo {
+  background-color: #e12f2f;
+}
+
+.table-games-logo {
+  background-color: #1db655;
+}
+
+.tournaments-logo {
+  background-color: #2d6eef;
+}
+
+.live-games-logo {
+  background-color: #983bed;
+}
+
+.categories-section button {
+  background: linear-gradient(90deg, #9939f3, #ee3491);
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 12px 32px;
+  border-radius: 6px;
+  margin: 48px auto 0;
 }
 
 footer {
-  background-color: #222;
-  color: #fff;
+  padding: 48px 16px;
+  background-color: black;
+}
+
+.footer-logo {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 0;
+  color: #9ca3af;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #9ca3af;
   text-align: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  border-top: 1px solid #333;
+  padding-top: 32px;
+  margin-top: 32px;
 }
