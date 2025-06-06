@@ -19,8 +19,64 @@ header {
   right: 0;
 }
 
-nav {
+#main-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+#burger-btn {
   display: none;
+}
+
+#main-nav div {
+  padding: 16px 0;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.nav-button {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(90deg, #9939f3, #ee3491);
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px 0;
+}
+
+@media (max-width: 768px) {
+  #main-nav {
+    display: none;
+    flex-direction: column;
+    background: black;
+    position: absolute;
+    top: 69px;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+  }
+
+  #main-nav.active {
+    display: flex;
+    gap: 24px;
+  }
+
+  #main-nav .nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #9ca3af;
+    padding: 0 8px;
+    font-weight: 600;
+  }
+
+  #burger-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .gradient-logo {
@@ -61,7 +117,9 @@ header button {
   margin: 0;
 }
 
-.hero h2 span {
+.hero h2 span,
+.policy-hero h2 span,
+.game-hero h2 span {
   background: linear-gradient(90deg, #a855f7, #ec4899);
   -webkit-background-clip: text;
   background-clip: text;
@@ -69,11 +127,13 @@ header button {
   color: transparent;
 }
 
-.hero p {
+.hero p,
+.policy-hero p {
   font-size: 20px;
   margin: 0;
   color: #9ca3a3;
   line-height: 1.8;
+  text-align: center;
 }
 
 .welcome-message {
@@ -285,4 +345,268 @@ footer p {
   border-top: 1px solid #333;
   padding-top: 32px;
   margin-top: 32px;
+}
+
+/* Policy Page */
+
+#policy-main {
+  background-color: #1f2937;
+}
+
+.policy-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 16px 48px;
+  background: linear-gradient(135deg, #131a29, #1f2937);
+}
+
+.policy-hero h2 {
+  margin: 0;
+  color: white;
+  font-size: 36px;
+}
+
+#policy-update {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+#policy-contents {
+  padding: 48px 16px;
+}
+
+.content-container {
+  background-color: #18202f;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.content-container h3 {
+  color: white;
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.content-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content-links a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #9ca3af;
+  padding: 8px 12px;
+  display: flex;
+  gap: 8px;
+  border-radius: 4px;
+}
+
+#policy-introduction {
+  padding: 0 16px;
+  margin-bottom: 32px;
+}
+
+.introduction-container {
+  padding: 32px;
+  background-color: #1a2332;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.introduction-container h3 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.introduction-container p {
+  margin: 0;
+  color: #d1d5db;
+  line-height: 1.625;
+}
+
+#collection,
+#information,
+#protection,
+#rights,
+#security {
+  padding: 0 16px;
+  padding-bottom: 32px;
+}
+
+#collection p,
+#information p,
+#protection p,
+#rights p,
+#security p,
+#collection h3,
+#information h3,
+#protection h3,
+#rights h3,
+#security h3 {
+  margin: 0;
+}
+
+.collection-container,
+.information-container,
+.protection-container,
+.rights-container,
+.security-container {
+  padding: 32px;
+  background-color: #1a2332;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#collection h3,
+#information h3,
+#protection h3,
+#rights h3,
+#security h3 {
+  color: white;
+  font-size: 24px;
+}
+
+#collection p,
+#information p,
+#protection p,
+#rights p,
+#security p {
+  color: #d1d5db;
+  line-height: 1.625;
+}
+
+.collection-text {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.information-list {
+  margin: 0 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+
+.information-list li::marker {
+  color: #c084fc;
+}
+
+.protection-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.protection-card {
+  background-color: #1d2635;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.protection-card-header,
+.right-header {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.protection-card-text,
+.right-text,
+.contact-text {
+  color: #d1d5db;
+  line-height: 1.25rem;
+  font-size: 14px;
+}
+
+.rights-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.right-card {
+  padding: 16px;
+  border: 1px solid #374151;
+  border-radius: 8px;
+}
+
+#security {
+  padding-bottom: 96px;
+}
+
+.contact-card {
+  padding: 24px;
+  border: 1px solid #a955f74d;
+  background: linear-gradient(to right, #2d2049, #392038);
+  border-radius: 8px;
+}
+
+.contact-header {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.contact-details {
+  color: #d8b4fe;
+  line-height: 1.25rem;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.policy-section-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.policy-section-logo {
+  height: 40px;
+  width: 40px;
+  background-color: #362d59;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.game-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 16px 48px;
+  background: linear-gradient(135deg, #131a29, #1f2937);
+}
+
+.game-hero h2 {
+  margin: 0;
+  color: white;
+  font-size: 36px;
+}
+
+.game-hero p {
+  font-size: 20px;
+  margin: 0 0 16px 0;
+  color: #9ca3a3;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.game-hero .welcome-message {
+  margin-bottom: 24px;
 }

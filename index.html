@@ -25,7 +25,7 @@
         <h1>LuxeCasino</h1>
       </div>
 
-      <button>
+      <button id="burger-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28px"
@@ -54,10 +54,13 @@
         </svg>
       </button>
 
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Games</a>
-        <a href="#">Policy</a>
+      <nav id="main-nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/pages/games.html">Games</a>
+        <a class="nav-link" href="/pages/policy.html">Policy</a>
+        <div>
+          <a class="nav-button" href="#">Play Now</a>
+        </div>
       </nav>
     </header>
 
@@ -399,7 +402,15 @@
       <div class="footer-text">
         © 2025 LuxeCasino. All rights reserved. Play responsibly.
       </div>
-      <a href="pages/policy.html">policy bitch </a>
     </footer>
+
+    <script>
+      const burgerBtn = document.getElementById("burger-btn");
+      const nav = document.getElementById("main-nav");
+
+      burgerBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
